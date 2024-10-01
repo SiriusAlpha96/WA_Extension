@@ -1,0 +1,28 @@
+{
+      "manifest_version": 3,
+      "name": "Poly Verb",
+      "version": "1.0",
+      "description": "Translate WhatsApp chats and messages.",
+      "permissions": [
+                  "activeTab",
+                  "scripting"
+            ],
+
+
+      "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+          "128":"icon.png"
+        }
+      },
+      "content_scripts": [
+        {
+          "matches": ["https://web.whatsapp.com/*"],
+          "js": ["content.js"]
+        }
+      ],
+      "background": {
+        "service_worker": "background.js"
+      }
+    }
+    
